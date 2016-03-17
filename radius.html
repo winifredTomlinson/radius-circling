@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>radius</title>
+<script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
+
+
+<script>
+var a = 300, b = 300, r = 90;
+var dt=0.5;  //弧度0.5,大概30°
+function run(){
+        var r=100;
+        var Py=a + Math.sin(dt)*r;
+        var Px=b - Math.cos(dt)*r;
+        $('div').css({'left':Px+'px','top':Py+'px'});
+        dt+=0.03
+}
+window.setInterval('run()',15)
+</script>
+
+
+</head>
+
+<body>
+
+
+
+<div style="height:60px;width:60px; background:#000;  position:absolute;border-radius:60px;"></div>
+
+
+</body>
+</html>
